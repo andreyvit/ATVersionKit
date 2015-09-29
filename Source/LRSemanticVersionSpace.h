@@ -4,6 +4,7 @@
 
 @class LRSemanticVersion;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface LRSemanticVersionSpace : LRVersionSpace
 
@@ -12,3 +13,5 @@
 - (LRSemanticVersion *)versionWithString:(NSString *)string;
 
 @end
+
+NS_ASSUME_NONNULL_END

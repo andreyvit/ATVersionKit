@@ -1,6 +1,7 @@
-
 #import "LRVersion.h"
 
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface LRSemanticVersion : LRVersion
 
@@ -13,8 +14,10 @@
 @property (nonatomic, readonly) NSString *prerelease;
 @property (nonatomic, readonly) NSString *build;
 
-@property (nonatomic, readonly) NSArray *prereleaseComponents;
+@property (nonatomic, readonly) NSArray<NSString *> *prereleaseComponents;
 
 + (instancetype)semanticVersionWithString:(NSString *)string;
 
 @end
+
+NS_ASSUME_NONNULL_END

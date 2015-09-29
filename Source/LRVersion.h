@@ -1,9 +1,8 @@
-
 #import <Foundation/Foundation.h>
-
 
 @class LRVersionSpace;
 
+NS_ASSUME_NONNULL_BEGIN
 
 extern NSString *const LRVersionErrorDomain;
 typedef enum {
@@ -17,12 +16,12 @@ typedef enum {
 
 @interface LRVersion : NSObject
 
-- (id)initWithVersionSpace:(LRVersionSpace *)versionSpace error:(NSError *)error;
+- (id)initWithVersionSpace:(LRVersionSpace *)versionSpace error:(NSError *_Nullable)error;
 
 @property(nonatomic, readonly) LRVersionSpace *versionSpace;
 
 @property(nonatomic, readonly, getter=isValid) BOOL valid;
-@property(nonatomic, readonly) NSError *error;
+@property(nonatomic, readonly, nullable) NSError *error;
 
 @property (nonatomic, readonly) NSInteger major;
 @property (nonatomic, readonly) NSInteger minor;
@@ -30,3 +29,5 @@ typedef enum {
 - (NSComparisonResult)compare:(LRVersion *)aVersion; // override point
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -6,6 +6,8 @@
 @class LRVersionSet;
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface LRVersionSpace : NSObject
 
 - (LRVersion *)versionWithString:(NSString *)string;
@@ -15,3 +17,5 @@
 - (LRVersion *)versionWithMajor:(NSInteger)major minor:(NSInteger)minor;
 
 @end
+
+NS_ASSUME_NONNULL_END

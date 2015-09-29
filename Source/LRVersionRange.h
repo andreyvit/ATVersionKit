@@ -6,15 +6,17 @@
 @class LRVersionSpace;
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface LRVersionRange : NSObject
 
 + (instancetype)versionRangeWithVersion:(LRVersion *)version;
 + (instancetype)unboundedVersionRange;
 
-- (instancetype)initWithStartingVersion:(LRVersion *)startingVersion startIncluded:(BOOL)startIncluded endingVersion:(LRVersion *)endingVersion endIncluded:(BOOL)endIncluded;
+- (instancetype)initWithStartingVersion:(nullable LRVersion *)startingVersion startIncluded:(BOOL)startIncluded endingVersion:(nullable LRVersion *)endingVersion endIncluded:(BOOL)endIncluded;
 
-@property(nonatomic, readonly) LRVersion *startingVersion;
-@property(nonatomic, readonly) LRVersion *endingVersion;
+@property(nonatomic, readonly, nullable) LRVersion *startingVersion;
+@property(nonatomic, readonly, nullable) LRVersion *endingVersion;
 
 @property(nonatomic, readonly, getter=isStartIncluded) BOOL startIncluded;
 @property(nonatomic, readonly, getter=isEndIncluded) BOOL endIncluded;
@@ -22,9 +24,11 @@
 - (BOOL)containsVersion:(LRVersion *)version;
 
 @property(nonatomic, readonly, getter=isValid) BOOL valid;
-@property(nonatomic, readonly) NSError *error;
+@property(nonatomic, readonly, nullable) NSError *error;
 
 // currently, this is not always available
-@property(nonatomic, readonly) LRVersionSpace *versionSpace;
+@property(nonatomic, readonly, nullable) LRVersionSpace *versionSpace;
 
 @end
+
+NS_ASSUME_NONNULL_END

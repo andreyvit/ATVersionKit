@@ -1,7 +1,6 @@
 
 #import "LRVersion.h"
 
-
 NSString *const LRVersionErrorDomain = @"LRVersionErrorDomain";
 
 
