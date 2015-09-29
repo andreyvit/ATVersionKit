@@ -21,7 +21,7 @@
 		43F4E5431BB7AE4D004EFF5C /* LRVersionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F4E5351BB7AE4D004EFF5C /* LRVersionSet.m */; settings = {ASSET_TAGS = (); }; };
 		43F4E5441BB7AE4D004EFF5C /* LRVersionSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F4E5361BB7AE4D004EFF5C /* LRVersionSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43F4E5451BB7AE4D004EFF5C /* LRVersionSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F4E5371BB7AE4D004EFF5C /* LRVersionSpace.m */; settings = {ASSET_TAGS = (); }; };
-		43F4E5491BB7AE85004EFF5C /* SemanticVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.m */; settings = {ASSET_TAGS = (); }; };
+		43F4E5491BB7AE85004EFF5C /* SemanticVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431A7F431BB7BE2C001E4E4F /* VersionRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionRange.swift; sourceTree = "<group>"; };
 		43F4E5101BB601BD004EFF5C /* ATVersionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATVersionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4E51A1BB601BD004EFF5C /* ATVersionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATVersionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4E52B1BB7AE4D004EFF5C /* ATVersionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATVersionKit.h; sourceTree = "<group>"; };
@@ -50,11 +51,15 @@
 		43F4E5351BB7AE4D004EFF5C /* LRVersionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRVersionSet.m; sourceTree = "<group>"; };
 		43F4E5361BB7AE4D004EFF5C /* LRVersionSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRVersionSpace.h; sourceTree = "<group>"; };
 		43F4E5371BB7AE4D004EFF5C /* LRVersionSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRVersionSpace.m; sourceTree = "<group>"; };
-		43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemanticVersionTests.m; sourceTree = "<group>"; };
+		43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticVersionTests.swift; sourceTree = "<group>"; };
 		43F4E54B1BB7AEA0004EFF5C /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
 		43F4E54C1BB7AEA0004EFF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F4E54D1BB7AEC3004EFF5C /* ATVersionKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ATVersionKit.podspec; sourceTree = "<group>"; };
 		43F4E54E1BB7AEC3004EFF5C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		43F4E55B1BB7B8F4004EFF5C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		43F4E55C1BB7B8F4004EFF5C /* SemanticVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticVersion.swift; sourceTree = "<group>"; };
+		43F4E55D1BB7B8F4004EFF5C /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		43F4E55E1BB7B8F4004EFF5C /* VersionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 				43F4E54E1BB7AEC3004EFF5C /* README.md */,
 				43F4E54D1BB7AEC3004EFF5C /* ATVersionKit.podspec */,
 				43F4E52A1BB7AE4D004EFF5C /* Source */,
+				43F4E55A1BB7B8F4004EFF5C /* SwiftSourceWIP */,
 				43F4E5471BB7AE85004EFF5C /* Tests */,
 				43F4E54A1BB7AEA0004EFF5C /* Metadata */,
 				43F4E5111BB601BD004EFF5C /* Products */,
@@ -120,7 +126,7 @@
 		43F4E5471BB7AE85004EFF5C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.m */,
+				43F4E5481BB7AE85004EFF5C /* SemanticVersionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -132,6 +138,18 @@
 				43F4E54C1BB7AEA0004EFF5C /* Info.plist */,
 			);
 			path = Metadata;
+			sourceTree = "<group>";
+		};
+		43F4E55A1BB7B8F4004EFF5C /* SwiftSourceWIP */ = {
+			isa = PBXGroup;
+			children = (
+				43F4E55B1BB7B8F4004EFF5C /* Error.swift */,
+				43F4E55D1BB7B8F4004EFF5C /* Version.swift */,
+				431A7F431BB7BE2C001E4E4F /* VersionRange.swift */,
+				43F4E55E1BB7B8F4004EFF5C /* VersionSet.swift */,
+				43F4E55C1BB7B8F4004EFF5C /* SemanticVersion.swift */,
+			);
+			path = SwiftSourceWIP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F4E5491BB7AE85004EFF5C /* SemanticVersionTests.m in Sources */,
+				43F4E5491BB7AE85004EFF5C /* SemanticVersionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
